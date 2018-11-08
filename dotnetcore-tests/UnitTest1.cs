@@ -1,7 +1,6 @@
-using System;
+using dotnetcore_sample.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using dotnetcore_sample.Controllers; 
 
 namespace dotnetcore_tests
 {
@@ -11,27 +10,27 @@ namespace dotnetcore_tests
         [TestMethod]
         public void About()
         {
-          // Arrange
-          HomeController controller = new HomeController();
+            // Arrange
+            HomeController controller = new HomeController();
 
-          // Act
-          ViewResult result = controller.About() as ViewResult;
+            // Act
+            ViewResult result = controller.About() as ViewResult;
 
-          // Assert
-          Assert.AreEqual("Your application description page.", result.ViewData["Message"]);
+            // Assert
+            Assert.AreEqual("Your application description page.", result.ViewData["Message"]);
         }
 
         [TestMethod]
         public void Contact()
         {
-          // Arrange
-          HomeController controller = new HomeController();
+            // Arrange
+            HomeController controller = new HomeController();
 
-          // Act
-          ViewResult result = controller.Contact() as ViewResult;
+            // Act
+            ViewResult result = controller.Contact() as ViewResult;
 
-          // Assert
-          Assert.AreEqual("Your contact page.", result.ViewData["Message"]);
+            // Assert
+            Assert.AreEqual("Your contact page.", result.ViewData["Message"]);
         }
     }
 }
